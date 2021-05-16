@@ -62,27 +62,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11284}
     - Class: 114
-      Script: {instanceID: 11588}
+      Script: {instanceID: 11586}
     - Class: 114
-      Script: {instanceID: 11646}
+      Script: {instanceID: 11644}
     - Class: 114
-      Script: {instanceID: 11926}
+      Script: {instanceID: 11924}
     - Class: 114
-      Script: {instanceID: 12324}
+      Script: {instanceID: 12320}
     - Class: 114
-      Script: {instanceID: 13202}
+      Script: {instanceID: 13198}
     - Class: 114
-      Script: {instanceID: 13510}
+      Script: {instanceID: 13504}
     - Class: 114
-      Script: {instanceID: 13838}
+      Script: {instanceID: 13830}
     - Class: 114
-      Script: {instanceID: 13864}
+      Script: {instanceID: 13856}
     - Class: 114
-      Script: {instanceID: 14104}
+      Script: {instanceID: 14094}
     - Class: 114
-      Script: {instanceID: 14256}
+      Script: {instanceID: 14246}
     - Class: 114
-      Script: {instanceID: 14484}
+      Script: {instanceID: 14474}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -131,17 +131,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11284}
     - Class: 114
-      Script: {instanceID: 11646}
+      Script: {instanceID: 11644}
     - Class: 114
-      Script: {instanceID: 11974}
+      Script: {instanceID: 11972}
     - Class: 114
-      Script: {instanceID: 12324}
+      Script: {instanceID: 12320}
     - Class: 114
-      Script: {instanceID: 13202}
+      Script: {instanceID: 13198}
     - Class: 114
-      Script: {instanceID: 13838}
+      Script: {instanceID: 13830}
     - Class: 114
-      Script: {instanceID: 14484}
+      Script: {instanceID: 14474}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -190,25 +190,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11284}
     - Class: 114
-      Script: {instanceID: 11588}
+      Script: {instanceID: 11586}
     - Class: 114
-      Script: {instanceID: 11646}
+      Script: {instanceID: 11644}
     - Class: 114
-      Script: {instanceID: 12324}
+      Script: {instanceID: 12320}
     - Class: 114
-      Script: {instanceID: 13056}
+      Script: {instanceID: 13052}
     - Class: 114
-      Script: {instanceID: 13202}
+      Script: {instanceID: 13198}
     - Class: 114
-      Script: {instanceID: 13838}
+      Script: {instanceID: 13830}
     - Class: 114
-      Script: {instanceID: 13864}
+      Script: {instanceID: 13856}
     - Class: 114
-      Script: {instanceID: 14104}
+      Script: {instanceID: 14094}
     - Class: 114
-      Script: {instanceID: 14256}
+      Script: {instanceID: 14246}
     - Class: 114
-      Script: {instanceID: 14484}
+      Script: {instanceID: 14474}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -797,4 +797,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Homescreen.unity
   - Assets/Scenes/CrazeOnPhonics.unity
   - Assets/Scenes/WordKit.unity
-  playerPath: C:/Users/fernan/Desktop/UnityProj/OctoPyBeta/TestBuild.apk
+  playerPath: C:/Users/fernan/Desktop/UnityProj/OctoPyBeta/OctoPy.apk
