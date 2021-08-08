@@ -18,9 +18,9 @@ class _MyDrawerState extends State<MyDrawer> {
             decoration: BoxDecoration(
               // gradient: LinearGradient(colors: [Colors.blue, Colors.green]),
               color: Colors.blue,
-              // image: DecorationImage(
-              //     image: AssetImage('images/background.jpg'),
-              //     fit: BoxFit.cover),
+              image: DecorationImage(
+                  image: AssetImage('images/background.jpg'),
+                  fit: BoxFit.cover),
             ),
             accountName: Text('Ahmer Iqbal'),
             accountEmail: Text('ahmer5253@gmail.com'),
