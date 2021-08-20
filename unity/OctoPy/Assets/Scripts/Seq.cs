@@ -23,16 +23,19 @@ public class Seq : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-   /*     setUp(LANG_CODE);
-#if UNITY_ANDROID
-        SpeechToText.instance.onPartialResultsCallback = OnFinalPartialSpeechResult;
-#endif
-        SpeechToText.instance.onResultCallback = OnFinalSpeechResult;
+        /*     setUp(LANG_CODE);
+     #if UNITY_ANDROID
+             SpeechToText.instance.onPartialResultsCallback = OnFinalPartialSpeechResult;
+     #endif
+             SpeechToText.instance.onResultCallback = OnFinalSpeechResult;
 
-        TextToSpeech.instance.onStartCallBack = onSpeakStart;
-        TextToSpeech.instance.onDoneCallback = onSpeakStop;
+             TextToSpeech.instance.onStartCallBack = onSpeakStart;
+             TextToSpeech.instance.onDoneCallback = onSpeakStop;
 
-        checkPermision();*/
+             checkPermision();*/
+       /* gameObject.AddComponent<UnityMessageManager>();
+        UnityMessageManager.Instance.SendMessageToFlutter("CrazeOnPhonics");*/
+
         speaker.onClick.AddListener(pressSpeak);
         buttonCorrect.onClick.AddListener(showCheck);
         buttonWrong.onClick.AddListener(showWrong);

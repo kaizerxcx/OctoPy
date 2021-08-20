@@ -25,6 +25,8 @@ public class WorkKitController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      /*  gameObject.AddComponent<UnityMessageManager>();
+        UnityMessageManager.Instance.SendMessageToFlutter("WordKit");*/
         plugin = SpeechRecognizerPlugin.GetPlatformPluginVersion(this.gameObject.name);
         mic.onClick.AddListener(startRecording);
         forSound.onClick.AddListener(makeSound);

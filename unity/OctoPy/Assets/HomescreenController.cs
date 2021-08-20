@@ -11,7 +11,9 @@ public class HomescreenController : MonoBehaviour
     public Button wordKit;
     void Start()
     {
-       crazeOnPhonics.onClick.AddListener(startCraze);
+       /* gameObject.AddComponent<UnityMessageManager>();
+        UnityMessageManager.Instance.SendMessageToFlutter("HomeScreen");*/
+        crazeOnPhonics.onClick.AddListener(startCraze);
        wordKit.onClick.AddListener(startWord);
     }
     private void FixedUpdate()

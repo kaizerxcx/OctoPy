@@ -15,12 +15,18 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   UnityWidgetController _unityWidgetController;
-
+  String sceneName = "Scene Name: ";
   void onUnityMessage(message) {
+    setState(() {
+      sceneName = "Scene Name: ${message.toString()}";
+    });
     print('Received message from unity: ${message.toString()}');
   }
 
   void onUnitySceneLoaded(SceneLoaded scene) {
+    // setState(() {
+    //   sceneName = "${scene.name}";
+    // });
     print('Received scene loaded from unity: ${scene.name}');
     print('Received scene loaded from unity buildIndex: ${scene.buildIndex}');
   }
@@ -35,7 +41,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        // title: Text('OctoPy'),
+        title: Text('$sceneName'),
       ),
       drawer: MyDrawer(),
       body: Center(
