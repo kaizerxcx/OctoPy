@@ -9,6 +9,7 @@ public class InfoButton : MonoBehaviour
     private UnityMessageManager unitymanager;
     private int i = 0;
     public Button infoButton;
+    public string sceneNumber;
     void Start()
     {
         unitymanager = GetComponent<UnityMessageManager>();
@@ -25,7 +26,7 @@ public class InfoButton : MonoBehaviour
     {
         if (!info)
         {
-            unitymanager.SendMessageToFlutter("Button on");
+            unitymanager.SendMessageToFlutter("Button on "+sceneNumber);
             info = true;
         }
         else

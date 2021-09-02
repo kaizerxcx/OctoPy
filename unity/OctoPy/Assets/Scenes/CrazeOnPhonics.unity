@@ -3806,6 +3806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoButton: {fileID: 354829867}
+  sceneNumber: 1
 --- !u!114 &1076602890
 MonoBehaviour:
   m_ObjectHideFlags: 0
