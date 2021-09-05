@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'DrawerFile.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
@@ -30,6 +32,10 @@ class _HomePageState extends State<HomePage> {
     //     title: 'Youtube Demo Page',
     //     url: 'https://www.youtube.com/watch?v=bWidmwLKSo8'),
   );
+  void sendUserInfo(String message) {
+    _unityWidgetController.postMessage(
+        'HomescreenController', 'getUserInfo', message);
+  }
 
   void onUnityMessage(message) {
     setState(() {
@@ -48,23 +54,22 @@ class _HomePageState extends State<HomePage> {
       if (message.toString() == 'Button on 2') {
         conte = Container(
           margin: const EdgeInsets.only(left: 5.00, right: 5.00),
-          // height: 600,
-          // width: 300,
-          // alignment: Alignment.center,
           child: new InstructionalVideo(
               title: 'Youtube Demo Page',
               url: 'https://www.youtube.com/watch?v=vZG2kaTacAY'),
         );
+      }
+      if (message.toString() == 'getUserInfo') {
+        conte = Container(
+          margin: const EdgeInsets.only(left: 5.00, right: 5.00),
+        );
+        sendUserInfo("Hello from flutter");
       } else if (message.toString() == 'Button off') {
         conte = Container(
           margin: const EdgeInsets.only(left: 40.00),
           height: 600,
           width: 300,
           alignment: Alignment.center,
-          // child: new InstructionalVideo(
-          //     title: 'Youtube Demo Page',
-          //     url:
-          //         'https://www.youtube.com/watch?v=bWidmwLKSo8'),
         );
       }
     });

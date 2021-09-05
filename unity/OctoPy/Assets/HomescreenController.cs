@@ -13,29 +13,40 @@ public class HomescreenController : MonoBehaviour
     public TextMeshProUGUI fronttext;
     public GameObject WordKitLock;
     private int i = 0;
+    private string flutterMessage = "";
+    private UnityMessageManager unitymanager;
+
     void Start()
     {
        /* gameObject.AddComponent<UnityMessageManager>();
         UnityMessageManager.Instance.SendMessageToFlutter("HomeScreen");*/
         crazeOnPhonics.onClick.AddListener(startCraze);
        wordKit.onClick.AddListener(startWord);
-          
-      
+        unitymanager = GetComponent<UnityMessageManager>();
+
     }
+    
     private void FixedUpdate()
     {
+        unitymanager.SendMessageToFlutter("getUserInfo");
         SoundManagerScript.playSound("Homescreen");
         StartCoroutine(ExecuteAfterTime(0.1f));
-        fronttext.SetText(" " +i);
+       
         if (i > 27)
         {
             WordKitLock.SetActive(true);
             wordKit.interactable = false;
         }
+        fronttext.SetText(" " + flutterMessage);
+    }
+    public void getUserInfo(string message)
+    {
+        flutterMessage = message;
     }
     // Update is called once per frame
     void Update()
     {
+        
         if (Application.platform == RuntimePlatform.Android)
         {
             if (Input.GetKey(KeyCode.Escape))
