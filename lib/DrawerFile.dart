@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'NewPage.dart';
+import 'Home.dart';
+import 'main.dart';
 
 class MyDrawer extends StatefulWidget {
   @override
@@ -38,31 +40,33 @@ class _MyDrawerState extends State<MyDrawer> {
           ),
           ListTile(
             leading: Icon(Icons.remove_red_eye),
-            title: Text('New Page'),
+            title: Text('Home'),
             onTap: () {
-              // Navigator.of(context)
-              //     .push(MaterialPageRoute(builder: (context) => NextPage()));
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => HomePage()));
             },
             // enabled: false,
             selected: true,
           ),
           ListTile(
             leading: Icon(Icons.account_circle),
-            title: Text('Account'),
+            title: Text('Next Page'),
             onTap: () {
-              print('Pressed');
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => NextPage()));
             },
-            enabled: false,
-            // selected: true,
+            enabled: true,
+            selected: true,
           ),
           ListTile(
-            leading: Icon(Icons.contacts),
-            title: Text('Contacts'),
+            leading: Icon(Icons.exit_to_app),
+            title: Text('Logout'),
             onTap: () {
-              print('Pressed');
+              appAuth.logout().then(
+                  (_) => Navigator.of(context).pushReplacementNamed('/login'));
             },
-            enabled: false,
-            // selected: true,
+            enabled: true,
+            selected: true,
           ),
           ListTile(
             leading: Icon(Icons.notifications),

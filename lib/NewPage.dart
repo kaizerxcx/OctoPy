@@ -13,7 +13,6 @@ class _NextPageState extends State<NextPage> {
       appBar: AppBar(
         centerTitle: true,
         title: Text('New Page'),
-        backgroundColor: Colors.green,
       ),
       drawer: MyDrawer(),
       body: Center(
