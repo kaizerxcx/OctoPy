@@ -62,8 +62,27 @@ class _MyDrawerState extends State<MyDrawer> {
             leading: Icon(Icons.exit_to_app),
             title: Text('Logout'),
             onTap: () {
-              appAuth.logout().then(
-                  (_) => Navigator.of(context).pushReplacementNamed('/login'));
+              showDialog<String>(
+                context: context,
+                builder: (BuildContext context) => AlertDialog(
+                  title: const Text('Sign Out of App?'),
+                  content: const Text('Are you sure that you to Sign Out'),
+                  actions: <Widget>[
+                    TextButton(
+                      onPressed: () => Navigator.pop(context, 'Cancel'),
+                      child: const Text('Cancel'),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        appAuth.setUser(-1);
+                        appAuth.logout().then((_) => Navigator.of(context)
+                            .pushReplacementNamed('/login'));
+                      },
+                      child: const Text('Sign Out'),
+                    ),
+                  ],
+                ),
+              );
             },
             enabled: true,
             selected: true,

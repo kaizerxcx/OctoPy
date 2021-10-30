@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:octopy/User.dart';
 import '/Screens/Login/components/background.dart';
 import '/Screens/Signup/signup_screen.dart';
 import '/components/already_have_an_account_acheck.dart';
@@ -33,20 +34,39 @@ class _BodyState extends State<Body> {
             SizedBox(height: size.height * 0.03),
             RoundedInputField(
               hintText: "Username",
-              onChanged: (value) {},
+              onChanged: (value) {
+                user.username = value.toString().trim();
+              },
             ),
             RoundedPasswordField(
-              onChanged: (value) {},
+              onChanged: (value) {
+                user.password = value.toString().trim();
+              },
             ),
             RoundedButton(
               text: "Log In",
               press: () {
                 setState(() => this._status = 'loading');
+                appAuth.verifyUser();
                 appAuth.login().then((result) {
                   if (result) {
                     Navigator.of(context).pushReplacementNamed('/home');
                   } else {
                     setState(() => this._status = 'rejected');
+                    showDialog<String>(
+                      context: context,
+                      builder: (BuildContext context) => AlertDialog(
+                        title: const Text('Invalid Login Credentials'),
+                        content: const Text(
+                            'Invalid Username and Password, Please Try Again'),
+                        actions: <Widget>[
+                          TextButton(
+                            onPressed: () => Navigator.pop(context, 'Ok'),
+                            child: const Text('Ok'),
+                          ),
+                        ],
+                      ),
+                    );
                   }
                 });
               },
