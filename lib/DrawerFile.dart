@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'NewPage.dart';
 import 'Home.dart';
 import 'main.dart';
+import '/Screens/Profile/profile_screen.dart';
 
 class MyDrawer extends StatefulWidget {
   @override
@@ -9,6 +10,41 @@ class MyDrawer extends StatefulWidget {
 }
 
 class _MyDrawerState extends State<MyDrawer> {
+  String firstname = "Loading";
+  String lastname = "Loading";
+  String username = "Loading";
+
+  void setFirstname(String fname) {
+    setState(() {
+      firstname = fname;
+    });
+  }
+
+  void setLastname(String lname) {
+    setState(() {
+      lastname = lname;
+    });
+  }
+
+  void setUsername(String username) {
+    setState(() {
+      this.username = username;
+    });
+  }
+
+  void initState() {
+    super.initState();
+    appAuth.getUser(user.id).then((result) {
+      user.firstname = result[0]['firstname'];
+      user.lastname = result[0]['lastname'];
+      user.age = result[0]['age'];
+      user.username = result[0]['username'];
+      setFirstname(result[0]['firstname']);
+      setLastname(result[0]['lastname']);
+      setUsername(result[0]['username']);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -24,22 +60,22 @@ class _MyDrawerState extends State<MyDrawer> {
                   image: AssetImage('images/background.jpg'),
                   fit: BoxFit.cover),
             ),
-            accountName: Text('Ahmer Iqbal'),
-            accountEmail: Text('ahmer5253@gmail.com'),
+            accountName: Text("$firstname, $lastname"),
+            accountEmail: Text(username),
             currentAccountPicture: CircleAvatar(
-              child: Text('JKT'),
+              child: Text("${firstname[0]}${lastname[0]}"),
               backgroundColor: Colors.white,
             ),
             otherAccountsPictures: [
               CircleAvatar(
-                child: Text('A'),
+                child: Text("${firstname[0]}${lastname[0]}"),
                 backgroundColor: Colors.white,
               )
             ],
             onDetailsPressed: () {},
           ),
           ListTile(
-            leading: Icon(Icons.remove_red_eye),
+            leading: Icon(Icons.home),
             title: Text('Home'),
             onTap: () {
               Navigator.of(context)
@@ -50,14 +86,58 @@ class _MyDrawerState extends State<MyDrawer> {
           ),
           ListTile(
             leading: Icon(Icons.account_circle),
+            title: Text('My Profile'),
+            onTap: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => ProfileScreen()));
+            },
+            enabled: true,
+            selected: true,
+          ),
+          ListTile(
+            leading: Icon(Icons.bar_chart),
+            title: Text('Leaderboards'),
+            onTap: () {
+              // appAuth.getUser(user.id).then((result) {
+              //   print(result);
+              // });
+              // print(appAuth.dogs[0]['name']);
+            },
+            enabled: true,
+            selected: true,
+          ),
+          ListTile(
+            leading: Icon(Icons.money),
+            title: Text('My Rewards'),
+            onTap: () {
+              // appAuth.getUser(user.id).then((result) {
+              //   print(result);
+              // });
+              // print(appAuth.dogs[0]['name']);
+            },
+            enabled: true,
+            selected: true,
+          ),
+          ListTile(
+            leading: Icon(Icons.stacked_line_chart),
+            title: Text('Insights'),
+            onTap: () {
+              print('Pressed');
+            },
+            enabled: false,
+            selected: true,
+          ),
+          ListTile(
+            leading: Icon(Icons.account_circle),
             title: Text('Next Page'),
             onTap: () {
               Navigator.of(context)
                   .push(MaterialPageRoute(builder: (context) => NextPage()));
             },
-            enabled: true,
-            selected: true,
+            enabled: false,
+            selected: false,
           ),
+          Divider(thickness: 1.0),
           ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('Logout'),
@@ -86,44 +166,6 @@ class _MyDrawerState extends State<MyDrawer> {
             },
             enabled: true,
             selected: true,
-          ),
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Notification'),
-            onTap: () {
-              print('Pressed');
-            },
-            enabled: false,
-            // selected: true,
-          ),
-          Divider(thickness: 1.0),
-          ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Setting'),
-            onTap: () {
-              print('Pressed');
-            },
-            enabled: false,
-            // selected: true,
-          ),
-          ListTile(
-            leading: Icon(Icons.payment),
-            title: Text('Payment Methods'),
-            onTap: () {
-              print('Pressed');
-            },
-            enabled: false,
-            // selected: true,
-          ),
-          Divider(thickness: 1.0),
-          ListTile(
-            leading: Icon(Icons.bug_report),
-            title: Text('Bug'),
-            onTap: () {
-              print('Pressed');
-            },
-            enabled: false,
-            // selected: true,
           ),
           Divider(thickness: 1.0),
           Expanded(

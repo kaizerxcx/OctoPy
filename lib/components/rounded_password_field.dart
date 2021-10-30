@@ -4,7 +4,10 @@ import '/constants.dart';
 
 class RoundedPasswordField extends StatefulWidget {
   final ValueChanged<String> onChanged;
-  const RoundedPasswordField({Key key, this.onChanged}) : super(key: key);
+  final String display;
+  const RoundedPasswordField(
+      {Key key, this.onChanged, this.display = "Password"})
+      : super(key: key);
 
   @override
   _RoundedPasswordFieldState createState() => _RoundedPasswordFieldState();
@@ -28,7 +31,7 @@ class _RoundedPasswordFieldState extends State<RoundedPasswordField> {
         onChanged: widget.onChanged,
         cursorColor: kPrimaryColor,
         decoration: InputDecoration(
-          hintText: "Password",
+          hintText: widget.display,
           icon: Icon(
             Icons.lock,
             color: kPrimaryColor,

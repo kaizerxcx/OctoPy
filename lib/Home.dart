@@ -86,8 +86,9 @@ class _HomePageState extends State<HomePage> {
     // ]);
     return Scaffold(
         appBar: AppBar(
-          centerTitle: true,
-          title: Text('$sceneName'),
+          // centerTitle: true,
+          // title: Text('$sceneName'),
+          title: Text('Home'),
         ),
         drawer: MyDrawer(),
         body: Center(

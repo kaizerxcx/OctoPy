@@ -1,5 +1,7 @@
 import 'dart:async';
 import 'dart:math';
+import 'package:octopy/User.dart';
+
 import '/main.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -15,6 +17,7 @@ class AuthService {
       session_id = result;
       if (result > 0) {
         flag = true;
+        user.id = result;
       }
       print(result);
     });
@@ -67,15 +70,63 @@ class AuthService {
   }
 
   verifyUser() async {
+    bool ff = false;
     http.Response response = await http.post(
         Uri.parse(
             "http://$server/api/verifyUser/${user.username}/${user.password}/"),
         body: {});
     session_id = int.parse(response.body);
-    user.id = session_id;
+    user.id = int.parse(response.body);
+    print(int.parse(response.body));
     setUser(user.id);
     if (session_id > 0) {
       flag = true;
+      ff = true;
+    }
+    return ff;
+  }
+
+  regiterUser(String firstname, String lastname, int age, String username,
+      String password) async {
+    http.Response response = await http.post(
+        Uri.parse(
+            "http://$server/api/registerUser/$firstname/$lastname/$age/$username/$password/"),
+        body: {});
+    // return firstname;
+  }
+
+  getUser(int user_id) async {
+    http.Response response = await http
+        .post(Uri.parse("http://$server/api/getUser/$user_id/"), body: {});
+
+    var data = json.decode(response.body);
+    // user.firstname = data[0]['firstname'];
+    // user.lastname = data[0]['lastname'];
+    // user.username = data[0]['username'];
+    // print(data.runtimeType);
+    return data;
+  }
+
+  updateUser(int user_id, String firstname, String lastname, int age,
+      String username, String password) async {
+    http.Response response = await http.post(
+        Uri.parse(
+            "http://$server/api/updateUser/$user_id/$firstname/$lastname/$age/$username/$password/"),
+        body: {});
+    if (response.statusCode == 200) {
+      // If the server did return a 200 OK response,
+      // then parse the JSON.
+      return true;
+    }
+  }
+
+  deleteUser(int user_id) async {
+    http.Response response = await http
+        .post(Uri.parse("http://$server/api/deleteUser/$user_id/"), body: {});
+    if (response.statusCode == 200) {
+      // If the server did return a 200 OK response,
+      // then parse the JSON.
+      return true;
     }
   }
 }

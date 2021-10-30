@@ -47,8 +47,7 @@ class _BodyState extends State<Body> {
               text: "Log In",
               press: () {
                 setState(() => this._status = 'loading');
-                appAuth.verifyUser();
-                appAuth.login().then((result) {
+                appAuth.verifyUser().then((result) {
                   if (result) {
                     Navigator.of(context).pushReplacementNamed('/home');
                   } else {
@@ -69,6 +68,27 @@ class _BodyState extends State<Body> {
                     );
                   }
                 });
+                // appAuth.login().then((result) {
+                //   if (result) {
+                //     Navigator.of(context).pushReplacementNamed('/home');
+                //   } else {
+                //     setState(() => this._status = 'rejected');
+                //     showDialog<String>(
+                //       context: context,
+                //       builder: (BuildContext context) => AlertDialog(
+                //         title: const Text('Invalid Login Credentials'),
+                //         content: const Text(
+                //             'Invalid Username and Password, Please Try Again'),
+                //         actions: <Widget>[
+                //           TextButton(
+                //             onPressed: () => Navigator.pop(context, 'Ok'),
+                //             child: const Text('Ok'),
+                //           ),
+                //         ],
+                //       ),
+                //     );
+                //   }
+                // });
               },
             ),
             SizedBox(height: size.height * 0.03),
