@@ -9,6 +9,7 @@ class RoundedInputField extends StatefulWidget {
   final ValueChanged<String> onChanged;
   final bool isName;
   final String text;
+  final Function check;
   const RoundedInputField({
     Key key,
     this.hintText,
@@ -16,6 +17,7 @@ class RoundedInputField extends StatefulWidget {
     this.onChanged,
     this.isName = false,
     this.text = '',
+    this.check,
   }) : super(key: key);
 
   @override
@@ -32,11 +34,12 @@ class _RoundedInputFieldState extends State<RoundedInputField> {
   @override
   Widget build(BuildContext context) {
     return TextFieldContainer(
-      child: TextField(
+      child: TextFormField(
         controller: txt,
         onChanged: widget.onChanged,
         cursorColor: Color(0X53CFC6),
         maxLength: 100,
+        validator: widget.check,
         inputFormatters: [
           widget.isName
               ? FilteringTextInputFormatter.allow(RegExp('[a-zA-Z]'))

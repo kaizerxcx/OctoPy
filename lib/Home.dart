@@ -88,21 +88,37 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           // centerTitle: true,
           // title: Text('$sceneName'),
-          title: Text('Home'),
+          // backgroundColor: Color(0XFF57CBC8),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color(0XFFabe9cd),
+                Color(0XFF3eadcf),
+              ],
+            )),
+          ),
+          title: Text(
+            'Home',
+            style: TextStyle(color: Colors.white),
+          ),
+          iconTheme: IconThemeData(color: Colors.white),
         ),
         drawer: MyDrawer(),
         body: Center(
             child: Stack(
           children: <Widget>[
-            // Container(
-            //   height: MediaQuery.of(context).size.height,
-            //   width: MediaQuery.of(context).size.width,
-            //   child: UnityWidget(
-            //     onUnityCreated: _onUnityCreated,
-            //     onUnityMessage: onUnityMessage,
-            //     onUnitySceneLoaded: onUnitySceneLoaded,
-            //   ),
-            // ),
+            Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              // child: UnityWidget(
+              //   onUnityCreated: _onUnityCreated,
+              //   onUnityMessage: onUnityMessage,
+              //   onUnitySceneLoaded: onUnitySceneLoaded,
+              // ),
+            ),
             conte,
           ],
         )));

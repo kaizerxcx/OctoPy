@@ -8,12 +8,14 @@ class RoundedInputAgeField extends StatefulWidget {
   final IconData icon;
   final ValueChanged<String> onChanged;
   final String text;
+  final Function check;
   const RoundedInputAgeField({
     Key key,
     this.hintText,
     this.icon = Icons.person,
     this.onChanged,
     this.text = '',
+    this.check,
   }) : super(key: key);
 
   @override
@@ -30,11 +32,12 @@ class _RoundedInputAgeFieldState extends State<RoundedInputAgeField> {
   @override
   Widget build(BuildContext context) {
     return TextFieldContainer(
-      child: TextField(
+      child: TextFormField(
         controller: txt,
         onChanged: widget.onChanged,
         cursorColor: Color(0X53CFC6),
         keyboardType: TextInputType.number,
+        validator: widget.check,
         inputFormatters: [
           FilteringTextInputFormatter.allow(RegExp('^([6-8])')),
         ],

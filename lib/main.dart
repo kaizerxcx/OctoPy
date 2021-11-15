@@ -10,9 +10,11 @@ import 'home.dart';
 import '/Screens/Login/login_screen.dart';
 import '/Services/auth.service.dart';
 import 'User.dart';
+import 'Child.dart';
 
 AuthService appAuth = new AuthService();
 User user = new User();
+Child child = new Child();
 // void main() => runApp(MaterialApp(
 //       debugShowCheckedModeBanner: false,
 //       theme: ThemeData(primarySwatch: Colors.blue),
@@ -30,7 +32,9 @@ void main() async {
   // Run app!
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
-    theme: ThemeData(primarySwatch: Colors.blue),
+    theme: ThemeData(
+      primaryColor: Color(0XFF57CBC8),
+    ),
     home: _defaultHome,
     routes: <String, WidgetBuilder>{
       // Set routes for using the Navigator.
