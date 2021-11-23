@@ -44,11 +44,12 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 // }
 
 class InstructionalVideo extends StatefulWidget {
-  const InstructionalVideo({Key key, this.title, this.url}) : super(key: key);
+  const InstructionalVideo({Key key, this.title, this.url, this.play = false})
+      : super(key: key);
 
   final String title;
   final url;
-
+  final bool play;
   @override
   _InstructionalVideoState createState() => _InstructionalVideoState();
 }
@@ -61,7 +62,7 @@ class _InstructionalVideoState extends State<InstructionalVideo> {
         flags: YoutubePlayerFlags(
           enableCaption: false,
           isLive: false,
-          autoPlay: false,
+          autoPlay: widget.play,
         ));
   }
 

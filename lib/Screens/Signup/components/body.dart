@@ -80,7 +80,7 @@ class _BodyState extends State<Body> {
                     if (value == null || value.isEmpty) {
                       return 'Please enter Age';
                     }
-                    return usernameValidator;
+                    return null;
                   },
                   onChanged: (value) {
                     user.age = int.parse(value.toString().trim());

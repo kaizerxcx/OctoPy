@@ -16,10 +16,10 @@ class _HomePageState extends State<HomePage> {
   bool insButton = false;
   YoutubePlayerController _controller;
   Widget conte = Container(
-    margin: const EdgeInsets.only(left: 50.00),
+    // margin: const EdgeInsets.only(left: 50.00),
     height: 600,
-    width: 300,
-    // alignment: Alignment.center,
+    // width: 300,
+    alignment: Alignment.center,
     // child: new InstructionalVideo(
     //     title: 'Youtube Demo Page',
     //     url: 'https://www.youtube.com/watch?v=bWidmwLKSo8'),
@@ -49,6 +49,46 @@ class _HomePageState extends State<HomePage> {
           child: new InstructionalVideo(
               title: 'Youtube Demo Page',
               url: 'https://www.youtube.com/watch?v=vZG2kaTacAY'),
+        );
+      }
+      if (message.toString() == 'ReadingSpree1') {
+        conte = Container(
+          margin: const EdgeInsets.only(left: 5.00, right: 5.00),
+          child: new InstructionalVideo(
+            title: 'A Day in th Park with my Dad',
+            url: 'https://www.youtube.com/watch?v=_Bsq4VT5tUw',
+            play: true,
+          ),
+        );
+      }
+      if (message.toString() == 'ReadingSpree2') {
+        conte = Container(
+          margin: const EdgeInsets.only(left: 5.00, right: 5.00),
+          child: new InstructionalVideo(
+            title: 'Friends and Beach',
+            url: 'https://www.youtube.com/watch?v=7LlFbbUuJ6M',
+            play: true,
+          ),
+        );
+      }
+      if (message.toString() == 'ReadingSpree3') {
+        conte = Container(
+          margin: const EdgeInsets.only(left: 5.00, right: 5.00),
+          child: new InstructionalVideo(
+            title: 'Athena’s Pool Party',
+            url: 'https://www.youtube.com/watch?v=W2VLChVn1Ok',
+            play: true,
+          ),
+        );
+      }
+      if (message.toString() == 'ReadingSpree4') {
+        conte = Container(
+          margin: const EdgeInsets.only(left: 5.00, right: 5.00),
+          child: new InstructionalVideo(
+            title: 'Strawberry Picking',
+            url: 'https://www.youtube.com/watch?v=tb0UJ2m9MUg',
+            play: true,
+          ),
         );
       }
       if (message.toString() == 'getUserInfo') {
@@ -113,11 +153,11 @@ class _HomePageState extends State<HomePage> {
             Container(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
-              // child: UnityWidget(
-              //   onUnityCreated: _onUnityCreated,
-              //   onUnityMessage: onUnityMessage,
-              //   onUnitySceneLoaded: onUnitySceneLoaded,
-              // ),
+              child: UnityWidget(
+                onUnityCreated: _onUnityCreated,
+                onUnityMessage: onUnityMessage,
+                onUnitySceneLoaded: onUnitySceneLoaded,
+              ),
             ),
             conte,
           ],

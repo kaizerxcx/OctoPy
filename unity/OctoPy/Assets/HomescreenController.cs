@@ -10,6 +10,7 @@ public class HomescreenController : MonoBehaviour
     // Start is called before the first frame update
     public Button crazeOnPhonics;
     public Button wordKit;
+    public Button readingSpree;
     public TextMeshProUGUI fronttext;
     public GameObject WordKitLock;
     private int i = 0;
@@ -21,7 +22,8 @@ public class HomescreenController : MonoBehaviour
        /* gameObject.AddComponent<UnityMessageManager>();
         UnityMessageManager.Instance.SendMessageToFlutter("HomeScreen");*/
         crazeOnPhonics.onClick.AddListener(startCraze);
-       wordKit.onClick.AddListener(startWord);
+        wordKit.onClick.AddListener(startWord);
+        readingSpree.onClick.AddListener(startReading);
         unitymanager = GetComponent<UnityMessageManager>();
 
     }
@@ -65,6 +67,10 @@ public class HomescreenController : MonoBehaviour
     public void startWord()
     {
         SceneManager.LoadScene("WordKit");
+    }
+    public void startReading()
+    {
+        SceneManager.LoadScene("ReadingSpree");
     }
     /*  public int GetSDKLevel()
       {

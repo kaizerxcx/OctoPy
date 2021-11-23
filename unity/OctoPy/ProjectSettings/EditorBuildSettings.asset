@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WordKit.unity
     guid: 5a3e103058c8750488bd59f1ff9eb31f
+  - enabled: 1
+    path: Assets/Scenes/ReadingSpree.unity
+    guid: a60186c420fc6ca488ec9252f2488771
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 5abb7bf5775754c349ee756010a3a1fd,
       type: 2}

@@ -9,11 +9,13 @@ public class InfoButton : MonoBehaviour
     private UnityMessageManager unitymanager;
     private int i = 0;
     public Button infoButton;
+    public Button backButton;
     public string sceneNumber;
     void Start()
     {
         unitymanager = GetComponent<UnityMessageManager>();
         infoButton.onClick.AddListener(pressInfo);
+        backButton.onClick.AddListener(exitVid);
     }
 
     // Update is called once per frame
@@ -34,5 +36,10 @@ public class InfoButton : MonoBehaviour
             unitymanager.SendMessageToFlutter("Button off");
             info = false;
         }
+    }
+
+    public void exitVid()
+    {
+        unitymanager.SendMessageToFlutter("Button off");
     }
 }

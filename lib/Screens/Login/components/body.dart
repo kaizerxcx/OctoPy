@@ -46,28 +46,30 @@ class _BodyState extends State<Body> {
             RoundedButton(
               text: "Log In",
               press: () {
-                setState(() => this._status = 'loading');
-                appAuth.verifyUser().then((result) {
-                  if (result) {
-                    Navigator.of(context).pushReplacementNamed('/home');
-                  } else {
-                    setState(() => this._status = 'rejected');
-                    showDialog<String>(
-                      context: context,
-                      builder: (BuildContext context) => AlertDialog(
-                        title: const Text('Invalid Login Credentials'),
-                        content: const Text(
-                            'Invalid Username and Password, Please Try Again'),
-                        actions: <Widget>[
-                          TextButton(
-                            onPressed: () => Navigator.pop(context, 'Ok'),
-                            child: const Text('Ok'),
-                          ),
-                        ],
-                      ),
-                    );
-                  }
-                });
+                Navigator.of(context).pushReplacementNamed('/home');
+                // setState(() => this._status = 'loading');
+                // appAuth.verifyUser().then((result) {
+                //   if (result) {
+                //     Navigator.of(context).pushReplacementNamed('/home');
+                //   } else {
+                //     setState(() => this._status = 'rejected');
+                //     showDialog<String>(
+                //       context: context,
+                //       builder: (BuildContext context) => AlertDialog(
+                //         title: const Text('Invalid Login Credentials'),
+                //         content: const Text(
+                //             'Invalid Username and Password, Please Try Again'),
+                //         actions: <Widget>[
+                //           TextButton(
+                //             onPressed: () => Navigator.pop(context, 'Ok'),
+                //             child: const Text('Ok'),
+                //           ),
+                //         ],
+                //       ),
+                //     );
+                //   }
+                // });
+
                 // appAuth.login().then((result) {
                 //   if (result) {
                 //     Navigator.of(context).pushReplacementNamed('/home');
