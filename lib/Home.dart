@@ -22,7 +22,17 @@ class _HomePageState extends State<HomePage> {
     alignment: Alignment.center,
     // child: new InstructionalVideo(
     //     title: 'Youtube Demo Page',
+    //     play: true,
     //     url: 'https://www.youtube.com/watch?v=bWidmwLKSo8'),
+  );
+  Widget conte2 = Container(
+    // margin: const EdgeInsets.only(left: 50.00),
+    height: 600,
+    // width: 300,
+    alignment: Alignment.center,
+    // child: new InstructionalVideo(
+    //     title: 'Youtube Demo Page',
+    //     url: 'https://www.youtube.com/watch?v=14gEPj9y9o8'),
   );
   void sendUserInfo(String message) {
     _unityWidgetController.postMessage(
@@ -51,13 +61,21 @@ class _HomePageState extends State<HomePage> {
               url: 'https://www.youtube.com/watch?v=vZG2kaTacAY'),
         );
       }
+      if (message.toString() == 'Button on 3') {
+        conte2 = Container(
+          margin: const EdgeInsets.only(left: 5.00, right: 5.00),
+          child: new InstructionalVideo(
+              title: 'Youtube Demo Page',
+              url: 'https://www.youtube.com/watch?v=8uhaJJMOjCo'),
+        );
+      }
       if (message.toString() == 'ReadingSpree1') {
         conte = Container(
           margin: const EdgeInsets.only(left: 5.00, right: 5.00),
           child: new InstructionalVideo(
             title: 'A Day in th Park with my Dad',
             url: 'https://www.youtube.com/watch?v=_Bsq4VT5tUw',
-            play: true,
+            // play: true,
           ),
         );
       }
@@ -98,6 +116,12 @@ class _HomePageState extends State<HomePage> {
         sendUserInfo("Hello from flutter");
       } else if (message.toString() == 'Button off') {
         conte = Container(
+          margin: const EdgeInsets.only(left: 40.00),
+          height: 600,
+          width: 300,
+          alignment: Alignment.center,
+        );
+        conte2 = Container(
           margin: const EdgeInsets.only(left: 40.00),
           height: 600,
           width: 300,
@@ -160,6 +184,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             conte,
+            conte2
           ],
         )));
   }
