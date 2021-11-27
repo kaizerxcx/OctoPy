@@ -258,7 +258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &473128314
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1331,6 +1331,7 @@ MonoBehaviour:
   crazeOnPhonics: {fileID: 1846715370}
   wordKit: {fileID: 2018211579}
   readingSpree: {fileID: 2143627016}
+  mazeCraze: {fileID: 1997385920}
   fronttext: {fileID: 1237729667}
   WordKitLock: {fileID: 554218268}
 --- !u!114 &1651240923

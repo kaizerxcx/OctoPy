@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class InfoButton : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -41,5 +43,7 @@ public class InfoButton : MonoBehaviour
     public void exitVid()
     {
         unitymanager.SendMessageToFlutter("Button off");
+        SceneManager.LoadScene("Homescreen");
+
     }
 }

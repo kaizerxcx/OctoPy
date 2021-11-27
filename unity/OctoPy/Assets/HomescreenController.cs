@@ -11,6 +11,7 @@ public class HomescreenController : MonoBehaviour
     public Button crazeOnPhonics;
     public Button wordKit;
     public Button readingSpree;
+    public Button mazeCraze;
     public TextMeshProUGUI fronttext;
     public GameObject WordKitLock;
     private int i = 0;
@@ -24,6 +25,7 @@ public class HomescreenController : MonoBehaviour
         crazeOnPhonics.onClick.AddListener(startCraze);
         wordKit.onClick.AddListener(startWord);
         readingSpree.onClick.AddListener(startReading);
+        mazeCraze.onClick.AddListener(startMazeCraze);
         unitymanager = GetComponent<UnityMessageManager>();
 
     }
@@ -71,6 +73,10 @@ public class HomescreenController : MonoBehaviour
     public void startReading()
     {
         SceneManager.LoadScene("ReadingSpree");
+    }
+    public void startMazeCraze()
+    {
+        SceneManager.LoadScene("MazeCraze");
     }
     /*  public int GetSDKLevel()
       {
