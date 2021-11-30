@@ -41,9 +41,9 @@ class _RoundedInputFieldState extends State<RoundedInputField> {
         maxLength: 100,
         validator: widget.check,
         inputFormatters: [
-          widget.isName
-              ? FilteringTextInputFormatter.allow(RegExp('[a-zA-Z]'))
-              : FilteringTextInputFormatter.deny(""),
+          // widget.isName
+          //     ? FilteringTextInputFormatter.allow(RegExp('[a-zA-Z]'))
+          //     : FilteringTextInputFormatter.deny(""),
         ],
         decoration: InputDecoration(
           icon: Icon(

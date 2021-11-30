@@ -4,6 +4,7 @@ import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'InstructionalVideo.dart';
 import 'package:flutter/services.dart';
+import '/main.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,15 +17,16 @@ class _HomePageState extends State<HomePage> {
   bool insButton = false;
   YoutubePlayerController _controller;
   Widget conte = Container(
-    // margin: const EdgeInsets.only(left: 50.00),
-    height: 600,
-    // width: 300,
-    alignment: Alignment.center,
-    // child: new InstructionalVideo(
-    //     title: 'Youtube Demo Page',
-    //     play: true,
-    //     url: 'https://www.youtube.com/watch?v=bWidmwLKSo8'),
-  );
+      // margin: const EdgeInsets.only(left: 50.00),
+      // height: 600,
+      // // width: 300,
+      // alignment: Alignment.center,
+      // child: new InstructionalVideo(
+      //     title: 'Youtube Demo Page',
+      //     play: true,
+      //     url: 'https://www.youtube.com/watch?v=bWidmwLKSo8'),
+
+      );
   Widget conte2 = Container(
     // margin: const EdgeInsets.only(left: 50.00),
     height: 600,
@@ -63,6 +65,22 @@ class _HomePageState extends State<HomePage> {
       }
       if (message.toString() == 'Button on 3') {
         conte2 = Container(
+          margin: const EdgeInsets.only(left: 5.00, right: 5.00),
+          child: new InstructionalVideo(
+              title: 'Youtube Demo Page',
+              url: 'https://www.youtube.com/watch?v=F0fdvY3ULnQ'),
+        );
+      }
+      if (message.toString() == 'Button on 4') {
+        conte = Container(
+          margin: const EdgeInsets.only(left: 200, right: 200),
+          child: new InstructionalVideo(
+              title: 'Youtube Demo Page',
+              url: 'https://www.youtube.com/watch?v=6xTpPkm-J_k'),
+        );
+      }
+      if (message.toString() == 'Button on 5') {
+        conte = Container(
           margin: const EdgeInsets.only(left: 5.00, right: 5.00),
           child: new InstructionalVideo(
               title: 'Youtube Demo Page',
@@ -113,15 +131,17 @@ class _HomePageState extends State<HomePage> {
         conte = Container(
           margin: const EdgeInsets.only(left: 5.00, right: 5.00),
         );
-        sendUserInfo("Hello from flutter");
-      } else if (message.toString() == 'Button off') {
-        conte = Container(
+        sendUserInfo(user.id.toString());
+      }
+      if (message.toString() == 'Button off reading') {
+        conte2 = Container(
           margin: const EdgeInsets.only(left: 40.00),
           height: 600,
           width: 300,
           alignment: Alignment.center,
         );
-        conte2 = Container(
+      } else if (message.toString() == 'Button off') {
+        conte = Container(
           margin: const EdgeInsets.only(left: 40.00),
           height: 600,
           width: 300,

@@ -122,6 +122,7 @@ public class WorkKitController : MonoBehaviour
             }
             int number = Int32.Parse(score.text.ToString()) + 5;
             score.text = number.ToString();
+            StartCoroutine(SessionManager.updatewordKitPoints(SessionManager.user_id, 5));
             SoundManagerScript.playSound("answerCorrect");
             StartCoroutine(ExecuteAfterTime(1.0f));
         }

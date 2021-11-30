@@ -3634,6 +3634,7 @@ MonoBehaviour:
   infoButton: {fileID: 7738587020181051880}
   backButton: {fileID: 8983570152699091966}
   sceneNumber: 3
+  isReading: 1
 --- !u!1 &6737457927347073107
 GameObject:
   m_ObjectHideFlags: 0

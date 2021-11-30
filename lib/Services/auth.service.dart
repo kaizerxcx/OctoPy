@@ -9,7 +9,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '/Child.dart';
 
 class AuthService {
-  String server = "10.0.2.2:8000";
+  //  String server = "10.0.2.2:8000";
+  String server = "104.215.189.210";
   // String server = "192.168.137.1:8000";
   int session_id = -1;
   bool flag = false;
@@ -71,12 +72,29 @@ class AuthService {
     return myPrefs.getInt(key) ?? -1;
   }
 
+  // verifyUser() async {
+  //   bool ff = false;
+  //   http.Response response = await http.post(
+  //       Uri.parse(
+  //           "http://$server/api/verifyUser/${user.username}/${user.password}/"),
+  //       body: {});
+  //   session_id = int.parse(response.body);
+  //   user.id = int.parse(response.body);
+  //   print(int.parse(response.body));
+  //   setUser(user.id);
+  //   if (session_id > 0) {
+  //     flag = true;
+  //     ff = true;
+  //   }
+  //   return ff;
+  // }
   verifyUser() async {
     bool ff = false;
-    http.Response response = await http.post(
-        Uri.parse(
-            "http://$server/api/verifyUser/${user.username}/${user.password}/"),
-        body: {});
+    var data = new Map<String, String>();
+    data['username'] = user.username;
+    data['password'] = user.password;
+    http.Response response = await http
+        .post(Uri.parse("http://$server/api/verifyUser/"), body: data);
     session_id = int.parse(response.body);
     user.id = int.parse(response.body);
     print(int.parse(response.body));
@@ -87,13 +105,27 @@ class AuthService {
     }
     return ff;
   }
+  // regiterUser(String firstname, String lastname, int age, String username,
+  //     String email, String password) async {
+  //   http.Response response = await http.post(
+  //       Uri.parse(
+  //           "http://$server/api/registerUser/$firstname/$lastname/$age/$username/$email/$password/"),
+  //       body: {});
+  //   // return firstname;
+  // }
 
   regiterUser(String firstname, String lastname, int age, String username,
       String email, String password) async {
-    http.Response response = await http.post(
-        Uri.parse(
-            "http://$server/api/registerUser/$firstname/$lastname/$age/$username/$email/$password/"),
-        body: {});
+    var data = new Map<String, String>();
+    data['firstname'] = firstname;
+    data['lastname'] = lastname;
+    data['age'] = age.toString();
+    data['username'] = username;
+    data['email'] = email;
+    data['password'] = password;
+
+    http.Response response = await http
+        .post(Uri.parse("http://$server/api/registerUser/"), body: data);
     // return firstname;
   }
 
@@ -109,12 +141,31 @@ class AuthService {
     return data;
   }
 
+  // updateUser(int user_id, String firstname, String lastname, int age,
+  //     String username, String email, String password) async {
+  //   http.Response response = await http.post(
+  //       Uri.parse(
+  //           "http://$server/api/updateUser/$user_id/$firstname/$lastname/$age/$username/$email/$password/"),
+  //       body: {});
+  //   if (response.statusCode == 200) {
+  //     // If the server did return a 200 OK response,
+  //     // then parse the JSON.
+  //     return true;
+  //   }
+  // }
   updateUser(int user_id, String firstname, String lastname, int age,
       String username, String email, String password) async {
-    http.Response response = await http.post(
-        Uri.parse(
-            "http://$server/api/updateUser/$user_id/$firstname/$lastname/$age/$username/$email/$password/"),
-        body: {});
+    var data = new Map<String, String>();
+    data['user_id'] = user_id.toString();
+    data['firstname'] = firstname;
+    data['lastname'] = lastname;
+    data['age'] = age.toString();
+    data['username'] = username;
+    data['email'] = email;
+    data['password'] = password;
+
+    http.Response response = await http
+        .post(Uri.parse("http://$server/api/updateUser/"), body: data);
     if (response.statusCode == 200) {
       // If the server did return a 200 OK response,
       // then parse the JSON.
@@ -174,31 +225,29 @@ class AuthService {
       List result = [];
       if (jsonData[0]['position'] == 1.0) {
         var map1 = {
-          'username': "Cocomelon - Nursery Rhymes",
-          'title': "Halloween Dress Up Song  CoComelon",
-          'date': "Oct 23, 2021",
-          'thum': "https://img.youtube.com/vi/moKn3gL1OQ0/0.jpg",
-          'url': "https://www.youtube.com/watch?v=moKn3gL1OQ0",
+          'username': "OctoPy",
+          'title': "A Birthday Gift",
+          'date': "Nov 13, 2021",
+          'thum': "https://img.youtube.com/vi/DGU5N_WcJk8/0.jpg",
+          'url': "https://www.youtube.com/watch?v=DGU5N_WcJk8",
         };
         result.add(map1);
       } else if (jsonData[0]['position'] == 2.0) {
         var map2 = {
-          'username': "Hello Kitty and Friends",
-          'title':
-              "My Melody's Top 5 Episodes | Hello Kitty and Friends Supercute Adventures",
-          'date': "Aug 22, 2021",
-          'thum': "https://img.youtube.com/vi/8DyN-ctdFow/0.jpg",
-          'url': "https://www.youtube.com/watch?v=8DyN-ctdFow",
+          'username': "OctoPy",
+          'title': "Sight Words",
+          'date': "Nov 23, 2021",
+          'thum': "https://img.youtube.com/vi/tG6VwqlCaLI/0.jpg",
+          'url': "https://www.youtube.com/watch?v=tG6VwqlCaLI",
         };
         result.add(map2);
       } else if (jsonData[0]['position'] == 3.0) {
         var map3 = {
-          'username': "DisneyJuniorUK",
-          'title':
-              "Minnie's Bow - Toons | Alarm Clocked Out | Disney Junior UK",
-          'date': "Jan 11, 2016",
-          'thum': "https://img.youtube.com/vi/ZezNGbJapvw/0.jpg",
-          'url': "https://www.youtube.com/watch?v=ZezNGbJapvw",
+          'username': "OctoPy",
+          'title': "Guess the Word",
+          'date': "Nov 23, 2021",
+          'thum': "https://img.youtube.com/vi/ykSCoiG1DpY/0.jpg",
+          'url': "https://www.youtube.com/watch?v=ykSCoiG1DpY",
         };
         result.add(map3);
       }
@@ -276,6 +325,13 @@ class AuthService {
       }
       if (jsonData[0]['wordKitPointsPercentile'] < 0.5) {
         var map2 = {
+          'username': "OctoPy",
+          'title': "Sight Words for Kids!",
+          'date': "Nov 19, 2021",
+          'thum': "https://img.youtube.com/vi/0v7fD5GFxCg/0.jpg",
+          'url': "https://www.youtube.com/watch?v=0v7fD5GFxCg",
+        };
+        var map22 = {
           'username': "Smile and Learn - English",
           'title': "Wild animals for kids - Vocabulary for kids",
           'date': "Jul 1, 2019",
@@ -283,9 +339,17 @@ class AuthService {
           'url': "https://www.youtube.com/watch?v=CA6Mofzh7jo",
         };
         result.add(map2);
+        result.add(map22);
       }
       if (jsonData[0]['alphaHopperPointsPercentile'] < 0.5) {
         var map3 = {
+          'username': "OctoPy",
+          'title': "Consonants",
+          'date': "Nov 18, 2021",
+          'thum': "https://img.youtube.com/vi/HScZKrB-nFQ/0.jpg",
+          'url': "https://www.youtube.com/watch?v=HScZKrB-nFQ",
+        };
+        var map33 = {
           'username': "Gokidz Asia Academy",
           'title':
               "Vowels and Consonants Song | Preschool Lessons | Simple English Lessons | Fun Learning ESL",
@@ -294,16 +358,16 @@ class AuthService {
           'url': "https://www.youtube.com/watch?v=SAfn5x-mc24",
         };
         result.add(map3);
+        result.add(map33);
       }
 
       if (jsonData[0]['mazeCrazePointsPercentile'] < 0.5) {
         var map3 = {
-          'username': "Kid-E-Cats",
-          'title':
-              "Kid-E-Cats | Following Instructions | Episode 77 | Cartoons for Kids",
-          'date': "Mar 7, 2020",
-          'thum': "https://img.youtube.com/vi/PFz9POflcPw/0.jpg",
-          'url': "https://www.youtube.com/watch?v=PFz9POflcPw",
+          'username': "OctoPy",
+          'title': "Fruits And Vegatables",
+          'date': "Nov 18, 2021",
+          'thum': "https://img.youtube.com/vi/35Lybtv-rPY/0.jpg",
+          'url': "https://www.youtube.com/watch?v=35Lybtv-rPY",
         };
         result.add(map3);
       }
@@ -320,12 +384,12 @@ class AuthService {
         var map33 = {
           'username': "OctoPy",
           'title': "Charlie and Bailey",
-          'date': "Nov 15, 2021",
-          'thum': "https://img.youtube.com/vi/5zZmD1_bM1w/0.jpg",
-          'url': "https://www.youtube.com/watch?v=5zZmD1_bM1w",
+          'date': "Nov 18, 2021",
+          'thum': "https://img.youtube.com/vi/vvKJlYU6rsM/0.jpg",
+          'url': "https://www.youtube.com/watch?v=vvKJlYU6rsM",
         };
-        result.add(map3);
         result.add(map33);
+        result.add(map3);
       }
 
       return result;

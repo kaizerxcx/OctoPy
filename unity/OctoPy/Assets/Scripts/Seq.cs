@@ -74,6 +74,7 @@ public class Seq : MonoBehaviour
         }
         int number = Int32.Parse(score.text.ToString()) + 5;
         score.text = number.ToString();
+        StartCoroutine(SessionManager.updatecrazeOnPhonicPoints(SessionManager.user_id, 5));
         SoundManagerScript.playSound("answerCorrect");
         StartCoroutine(ExecuteAfterTime(0.1f));
      

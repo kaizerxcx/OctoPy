@@ -52,7 +52,7 @@ class _BodyState extends State<Body> {
                     return null;
                   },
                   onChanged: (value) {
-                    user.firstname = value.toString().trim();
+                    user.firstname = value.toString();
                   },
                 ),
                 RoundedInputField(
@@ -65,7 +65,7 @@ class _BodyState extends State<Body> {
                     return null;
                   },
                   onChanged: (value) {
-                    user.lastname = value.toString().trim();
+                    user.lastname = value.toString();
                   },
                 ),
                 RoundedInputAgeField(

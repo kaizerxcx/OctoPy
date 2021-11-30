@@ -19,7 +19,7 @@ public class Player_Score : MonoBehaviour
     {
         trig.isTrigger = false;
         playerScore += 10;
-
+        StartCoroutine(SessionManager.updatealphaHopperPoints(SessionManager.user_id, 10));
         if (trig.tag == "Log")
         {
             PanelYouWin.SetActive(true);

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+using UnityEngine.UI;
 
 
 public class Jump_ : MonoBehaviour
@@ -26,6 +26,7 @@ public class Jump_ : MonoBehaviour
     /// time spent since last jump
     private float time;
 
+   
     private bool IsPointerOverUIObject()
     {
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
@@ -82,4 +83,6 @@ public class Jump_ : MonoBehaviour
             speedY
         );
     }
+
+   
 }

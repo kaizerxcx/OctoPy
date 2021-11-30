@@ -647,6 +647,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783747710}
   m_CullTransparentMesh: 0
+--- !u!1 &815981151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 815981153}
+  - component: {fileID: 815981152}
+  m_Layer: 0
+  m_Name: SessionManagement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &815981152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815981151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3486ac6859e5114a9a01bb3bb07cde6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &815981153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815981151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 201.2216, y: 399.8437, z: -76.67288}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &975981405
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,7 +752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1237729666
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1112,7 +1155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1515112525
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1332,6 +1375,7 @@ MonoBehaviour:
   wordKit: {fileID: 2018211579}
   readingSpree: {fileID: 2143627016}
   mazeCraze: {fileID: 1997385920}
+  alphaHopper: {fileID: 31081315}
   fronttext: {fileID: 1237729667}
   WordKitLock: {fileID: 554218268}
 --- !u!114 &1651240923

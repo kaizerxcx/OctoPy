@@ -1547,7 +1547,7 @@ MonoBehaviour:
   check: {fileID: 1893416788}
   wrong: {fileID: 1977896703}
   score: {fileID: 974576830}
-  next: {fileID: 1394994710}
+  next: {fileID: 1349800140}
 --- !u!4 &558414313
 Transform:
   m_ObjectHideFlags: 0

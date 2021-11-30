@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:octopy/Screens/Login/login_screen.dart';
 import 'NewPage.dart';
 import 'Home.dart';
 import 'main.dart';
@@ -194,25 +195,25 @@ class _MyDrawerState extends State<MyDrawer> {
             enabled: true,
             selected: true,
           ),
-          ListTile(
-            leading: Icon(
-              Icons.account_circle,
-              color: Color(0XFF57CBC8),
-            ),
-            title: Text(
-              'Next Page',
-              style: TextStyle(color: Color(0XFF57CBC8)),
-            ),
-            onTap: () {
-              Navigator.of(context).pushAndRemoveUntil(
-                  MaterialPageRoute(builder: (context) => NextPage()),
-                  (route) => false);
-              // Navigator.of(context)
-              //     .push(MaterialPageRoute(builder: (context) => NextPage()));
-            },
-            enabled: false,
-            selected: false,
-          ),
+          // ListTile(
+          //   leading: Icon(
+          //     Icons.account_circle,
+          //     color: Color(0XFF57CBC8),
+          //   ),
+          //   title: Text(
+          //     'Next Page',
+          //     style: TextStyle(color: Color(0XFF57CBC8)),
+          //   ),
+          //   onTap: () {
+          //     Navigator.of(context).pushAndRemoveUntil(
+          //         MaterialPageRoute(builder: (context) => NextPage()),
+          //         (route) => false);
+          //     // Navigator.of(context)
+          //     //     .push(MaterialPageRoute(builder: (context) => NextPage()));
+          //   },
+          //   enabled: false,
+          //   selected: false,
+          // ),
           Divider(thickness: 1.0),
           ListTile(
             leading: Icon(
@@ -237,6 +238,10 @@ class _MyDrawerState extends State<MyDrawer> {
                     TextButton(
                       onPressed: () {
                         appAuth.setUser(-1);
+                        Navigator.of(context).pushAndRemoveUntil(
+                            MaterialPageRoute(
+                                builder: (context) => LoginScreen()),
+                            (route) => false);
                         appAuth.logout().then((_) => Navigator.of(context)
                             .pushReplacementNamed('/login'));
                       },

@@ -13,6 +13,7 @@ public class InfoButton : MonoBehaviour
     public Button infoButton;
     public Button backButton;
     public string sceneNumber;
+    public bool isReading = false;
     void Start()
     {
         unitymanager = GetComponent<UnityMessageManager>();
@@ -35,14 +36,20 @@ public class InfoButton : MonoBehaviour
         }
         else
         {
-            unitymanager.SendMessageToFlutter("Button off");
+            if (!isReading)
+                unitymanager.SendMessageToFlutter("Button off");
+            else
+                unitymanager.SendMessageToFlutter("Button off reading");
             info = false;
         }
     }
 
     public void exitVid()
     {
+       if(!isReading)
         unitymanager.SendMessageToFlutter("Button off");
+       else
+            unitymanager.SendMessageToFlutter("Button off reading");
         SceneManager.LoadScene("Homescreen");
 
     }

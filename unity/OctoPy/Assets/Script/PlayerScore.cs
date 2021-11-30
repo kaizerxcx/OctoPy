@@ -42,7 +42,8 @@ public class PlayerScore : MonoBehaviour
             {
                 target.gameObject.SetActive(false);
                 score++;
-                scoreText.text = score.ToString ();
+            StartCoroutine(SessionManager.updatemazeCrazePoints(SessionManager.user_id, 1));
+            scoreText.text = score.ToString ();
                
 
             if (scoreText.text == "30")
