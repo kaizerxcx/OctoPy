@@ -9,7 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '/Child.dart';
 
 class AuthService {
-  //  String server = "10.0.2.2:8000";
+  //String server = "10.0.2.2:8000";
   String server = "104.215.189.210";
   // String server = "192.168.137.1:8000";
   int session_id = -1;
@@ -162,7 +162,9 @@ class AuthService {
     data['age'] = age.toString();
     data['username'] = username;
     data['email'] = email;
-    data['password'] = password;
+    String password2 = "";
+    if (password != null) password2 = password;
+    data['password'] = password2;
 
     http.Response response = await http
         .post(Uri.parse("http://$server/api/updateUser/"), body: data);

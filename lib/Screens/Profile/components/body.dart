@@ -169,11 +169,14 @@ class _BodyState extends State<Body> {
                           TextButton(
                             onPressed: () {
                               Navigator.pop(context, 'Cancel');
-                              appAuth.deleteUser(user.id).then((result) {
-                                appAuth.setUser(-1);
-                                Navigator.of(context)
-                                    .pushReplacementNamed('/login');
-                              });
+                              appAuth.deleteUser(user.id).then((result) {});
+                              appAuth.setUser(-1);
+                              Navigator.of(context).pushAndRemoveUntil(
+                                  MaterialPageRoute(
+                                      builder: (context) => LoginScreen()),
+                                  (route) => false);
+                              appAuth.logout().then((_) => Navigator.of(context)
+                                  .pushReplacementNamed('/login'));
                             },
                             child: const Text('Yes'),
                           ),
