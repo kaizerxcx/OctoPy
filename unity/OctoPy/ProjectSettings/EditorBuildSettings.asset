@@ -15,14 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Consonant1.unity
     guid: 91373d72dce4bef4c8608d1bc87fc6a8
   - enabled: 1
-    path: Assets/Scenes/Consonant2.unity
-    guid: 380dd72434a53f24bb7a6646648b017e
-  - enabled: 1
     path: Assets/Scenes/Vowel1.unity
     guid: e5b35f11262d3b64584dbbdfd5a2b57b
-  - enabled: 1
-    path: Assets/Scenes/Vowel2.unity
-    guid: df6a53a89de149f4fa0dca69886f85c1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/CrazeOnPhonics.unity
     guid: 2cda990e2423bbf4892e6590ba056729

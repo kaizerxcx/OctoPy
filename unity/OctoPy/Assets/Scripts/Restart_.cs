@@ -15,18 +15,6 @@ public class Restart_ : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneID);
-        SceneManager.LoadScene("Vowel2");
-    }
-    public void restartgame_3(int sceneID)
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(sceneID);
         SceneManager.LoadScene("Consonant1");
-    }
-    public void restartgame_4(int sceneID)
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(sceneID);
-        SceneManager.LoadScene("Consonant2");
     }
 }
