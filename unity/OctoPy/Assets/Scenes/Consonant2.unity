@@ -671,8 +671,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278255615
-  m_fontColor: {r: 1, g: 1, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4968,7 +4968,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 223.15, y: -497.55}
+  m_AnchoredPosition: {x: 98.15007, y: -570.5492}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &101660282
@@ -8834,8 +8834,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278255615
-  m_fontColor: {r: 1, g: 1, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -12234,7 +12234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -381.13, y: -334.44}
+  m_AnchoredPosition: {x: -380.1, y: -334.48}
   m_SizeDelta: {x: 22.614105, y: 28.427338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &323532296
@@ -15661,7 +15661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -240.15, y: -485.2}
+  m_AnchoredPosition: {x: -132, y: -509}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &453967131
@@ -16498,7 +16498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -379.40997, y: -334.59003}
+  m_AnchoredPosition: {x: -378.37997, y: -334.63004}
   m_SizeDelta: {x: 22.614105, y: 28.427338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &484607360
@@ -18245,7 +18245,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -18334,7 +18334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -378.63998, y: -334.58002}
+  m_AnchoredPosition: {x: -377.61, y: -334.62003}
   m_SizeDelta: {x: 22.614105, y: 28.427338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529483599
@@ -22112,7 +22112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 223.99997, y: -485.00037}
+  m_AnchoredPosition: {x: 98.15007, y: -570.5492}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &625158683
@@ -23342,7 +23342,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -380.33, y: -334.51}
+  m_AnchoredPosition: {x: -379.3, y: -334.55002}
   m_SizeDelta: {x: 22.614105, y: 28.427338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &682846566
@@ -29183,6 +29183,7 @@ GameObject:
   - component: {fileID: 874825353}
   - component: {fileID: 874825352}
   - component: {fileID: 874825351}
+  - component: {fileID: 874825355}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -29264,8 +29265,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 874825351}
-        m_MethodName: restartgame
+      - m_Target: {fileID: 874825355}
+        m_MethodName: quitGames
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29312,6 +29313,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874825349}
   m_CullTransparentMesh: 0
+--- !u!114 &874825355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874825349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b237f79201aa043a71ab24c2477694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &882359792
 GameObject:
   m_ObjectHideFlags: 0
@@ -38123,8 +38136,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278255615
+  m_fontColor: {r: 1, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -46488,7 +46501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1414320683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -48007,6 +48020,7 @@ GameObject:
   - component: {fileID: 1470990751}
   - component: {fileID: 1470990750}
   - component: {fileID: 1470990749}
+  - component: {fileID: 1470990753}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -48088,8 +48102,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1470990749}
-        m_MethodName: restartgame
+      - m_Target: {fileID: 1470990753}
+        m_MethodName: quitGames
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -48136,6 +48150,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470990747}
   m_CullTransparentMesh: 0
+--- !u!114 &1470990753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470990747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b237f79201aa043a71ab24c2477694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1472786014
 GameObject:
   m_ObjectHideFlags: 0
@@ -58563,6 +58589,7 @@ GameObject:
   - component: {fileID: 1755444126}
   - component: {fileID: 1755444125}
   - component: {fileID: 1755444124}
+  - component: {fileID: 1755444128}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -58644,8 +58671,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1755444124}
-        m_MethodName: restartgame
+      - m_Target: {fileID: 1755444128}
+        m_MethodName: quitGames
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -58692,6 +58719,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755444122}
   m_CullTransparentMesh: 0
+--- !u!114 &1755444128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755444122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b237f79201aa043a71ab24c2477694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1759353907
 GameObject:
   m_ObjectHideFlags: 0
@@ -62504,6 +62543,7 @@ GameObject:
   - component: {fileID: 1879739087}
   - component: {fileID: 1879739086}
   - component: {fileID: 1879739085}
+  - component: {fileID: 1879739089}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -62585,8 +62625,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1879739085}
-        m_MethodName: restartgame
+      - m_Target: {fileID: 1879739089}
+        m_MethodName: quitGames
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -62633,6 +62673,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879739083}
   m_CullTransparentMesh: 0
+--- !u!114 &1879739089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879739083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b237f79201aa043a71ab24c2477694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1883076469
 GameObject:
   m_ObjectHideFlags: 0
@@ -65736,6 +65788,7 @@ GameObject:
   - component: {fileID: 1979850813}
   - component: {fileID: 1979850812}
   - component: {fileID: 1979850811}
+  - component: {fileID: 1979850815}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -65817,8 +65870,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1979850811}
-        m_MethodName: restartgame
+      - m_Target: {fileID: 1979850815}
+        m_MethodName: quitGames
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -65865,6 +65918,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979850809}
   m_CullTransparentMesh: 0
+--- !u!114 &1979850815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979850809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b237f79201aa043a71ab24c2477694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1979955074
 GameObject:
   m_ObjectHideFlags: 0
@@ -67457,7 +67522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 172, y: 693}
+  m_AnchoredPosition: {x: 137, y: 662}
   m_SizeDelta: {x: 22.614105, y: 28.427338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2011732616
