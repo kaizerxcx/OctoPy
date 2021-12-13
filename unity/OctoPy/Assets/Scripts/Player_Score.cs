@@ -18,8 +18,8 @@ public class Player_Score : MonoBehaviour
     void OnTriggerEnter2D(Collider2D trig)
     {
         trig.isTrigger = false;
-        playerScore += 10;
-        StartCoroutine(SessionManager.updatealphaHopperPoints(SessionManager.user_id, 10));
+        playerScore += 5;
+        StartCoroutine(SessionManager.updatealphaHopperPoints(SessionManager.user_id, 5));
         if (trig.tag == "Log")
         {
             PanelYouWin.SetActive(true);
