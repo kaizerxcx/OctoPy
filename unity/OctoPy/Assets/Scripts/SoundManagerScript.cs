@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class SoundManagerScript: MonoBehaviour
 {
-    public static AudioClip buttonsound, correctSound, wrongSound, homescreenSound, dogSound, duckSound, goatSound;
+    public static AudioClip buttonsound, correctSound, wrongSound, homescreenSound, dogSound, cowSound, catSound;
     static AudioSource audioSrc;
     public Toggle m_Toggle;
     static bool hasPlayed = false;
     public static bool doghasPlayed = false;
-    public static bool duckhasPlayed = false;
-    public static bool goathasPlayed = false;
+    public static bool cowhasPlayed = false;
+    public static bool cathasPlayed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +20,8 @@ public class SoundManagerScript: MonoBehaviour
         correctSound = Resources.Load<AudioClip>("answerCorrect");
         homescreenSound = Resources.Load<AudioClip>("Homescreen");
         dogSound = Resources.Load<AudioClip>("dog");
-        duckSound = Resources.Load<AudioClip>("duck");
-        goatSound = Resources.Load<AudioClip>("goat");
+        cowSound = Resources.Load<AudioClip>("cow");
+        catSound = Resources.Load<AudioClip>("cat");
         // DontDestroyOnLoad(transform.gameObject);
         audioSrc = GetComponent<AudioSource>();
    
@@ -60,18 +60,18 @@ public class SoundManagerScript: MonoBehaviour
                     doghasPlayed = true;
                 }
                 break;
-            case "duck":
-                if (!duckhasPlayed)
+            case "cow":
+                if (!cowhasPlayed)
                 {
-                    audioSrc.PlayOneShot(duckSound);
-                    duckhasPlayed = true;
+                    audioSrc.PlayOneShot(cowSound);
+                    cowhasPlayed = true;
                 }
                 break;
-            case "goat":
-                if (!goathasPlayed)
+            case "cat":
+                if (!cathasPlayed)
                 {
-                    audioSrc.PlayOneShot(goatSound);
-                    goathasPlayed = true;
+                    audioSrc.PlayOneShot(catSound);
+                    cathasPlayed = true;
                 }
                 break;
         }

@@ -59,13 +59,13 @@ public class WorkKitController : MonoBehaviour
         {
             SoundManagerScript.doghasPlayed = false;
         }
-       else if (name.Equals("duck"))
+       else if (name.Equals("cow"))
         {
-            SoundManagerScript.duckhasPlayed = false;
+            SoundManagerScript.cowhasPlayed = false;
         }
-        else if (name.Equals("goat"))
+        else if (name.Equals("cat"))
         {
-            SoundManagerScript.goathasPlayed = false;
+            SoundManagerScript.cathasPlayed = false;
         }
         SoundManagerScript.playSound(name);
     }

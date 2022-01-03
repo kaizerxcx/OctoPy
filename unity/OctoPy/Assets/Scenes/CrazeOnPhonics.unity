@@ -386,7 +386,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: S
+  m_Text: B
 --- !u!222 &83887210
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 974576830}
-  question: Chair
+  question: cat
   nextCanvas: {fileID: 1318123089}
   speaker: {fileID: 399910629}
   buttonCorrect: {fileID: 516898664}
@@ -589,7 +589,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hamm_
+  m_Text: _ug
 --- !u!222 &184228649
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -667,7 +667,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: _olin
+  m_Text: _ed
 --- !u!222 &200323169
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1869,7 +1869,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 127}
+  m_AnchoredPosition: {x: 28, y: 99}
   m_SizeDelta: {x: 609.9417, y: 609.9417}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &528161782
@@ -1891,7 +1891,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f24cbd45706fbbc4c9974865942558ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7fa2c206b62c0c244a4b0070a3a23bbd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2116,7 +2116,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ez
+  m_Text: b
 --- !u!222 &613096476
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2539,7 +2539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 974576830}
-  question: Hammer
+  question: rug
   nextCanvas: {fileID: 969881041}
   speaker: {fileID: 1766393777}
   buttonCorrect: {fileID: 433769410}
@@ -2664,7 +2664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 974576830}
-  question: Vase
+  question: Van
   nextCanvas: {fileID: 1318123089}
   speaker: {fileID: 526408578}
   buttonCorrect: {fileID: 1214714563}
@@ -2787,7 +2787,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 71d82b67b0064d44e818485e29639d02, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b2c38e998013e6e4eb342ae9a470d33f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3402,7 +3402,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13d1108194f32eb47bd6f3174d75fef4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d82099191616e27459dddcd82404a8c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3453,7 +3453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 974576830}
-  question: Zebra
+  question: pin
   nextCanvas: {fileID: 722560357}
   speaker: {fileID: 643454932}
   buttonCorrect: {fileID: 715827948}
@@ -3692,7 +3692,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: _hair
+  m_Text: _at
 --- !u!222 &993588308
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3808,6 +3808,7 @@ MonoBehaviour:
   infoButton: {fileID: 354829867}
   backButton: {fileID: 39533625}
   sceneNumber: 1
+  isReading: 0
 --- !u!114 &1076602890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3987,7 +3988,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 127}
+  m_AnchoredPosition: {x: 51, y: 101}
   m_SizeDelta: {x: 609.9417, y: 609.9417}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1157653560
@@ -4009,7 +4010,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a9b114bf378e68b459583cf9cfe56ce3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb9e23bd81b2fbc42bd7acb67ce32061, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4412,7 +4413,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Z_bra
+  m_Text: pi_
 --- !u!222 &1228675329
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4490,7 +4491,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: _ase
+  m_Text: _an
 --- !u!222 &1257106668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4568,7 +4569,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bi
+  m_Text: C
 --- !u!222 &1266170858
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4765,7 +4766,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: a
+  m_Text: g
 --- !u!222 &1289484479
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4808,8 +4809,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 127}
-  m_SizeDelta: {x: 609.9417, y: 609.9417}
+  m_AnchoredPosition: {x: 5.2281036, y: 97.58599}
+  m_SizeDelta: {x: 530.4562, y: 285.17206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1310367396
 MonoBehaviour:
@@ -4830,7 +4831,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 83c32a0efd4c4e74c9a136988cb1ab3d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fdd0592ff2bd3ab42905a7eb5f4ff8eb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4906,7 +4907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 974576830}
-  question: Violin
+  question: bed
   nextCanvas: {fileID: 720947643}
   speaker: {fileID: 1814233863}
   buttonCorrect: {fileID: 1284960562}
@@ -5142,7 +5143,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Vi
+  m_Text: B
 --- !u!222 &1405493513
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5816,7 +5817,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: e
+  m_Text: n
 --- !u!222 &1763902513
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6204,7 +6205,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: er
+  m_Text: r
 --- !u!222 &1937421981
 CanvasRenderer:
   m_ObjectHideFlags: 0
