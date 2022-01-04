@@ -1549,6 +1549,7 @@ MonoBehaviour:
   wrong: {fileID: 1977896703}
   score: {fileID: 974576830}
   next: {fileID: 1349800140}
+  isLast: 1
 --- !u!4 &558414313
 Transform:
   m_ObjectHideFlags: 0
@@ -2881,6 +2882,7 @@ MonoBehaviour:
   wrong: {fileID: 1177800998}
   score: {fileID: 974576830}
   next: {fileID: 558414311}
+  isLast: 0
 --- !u!4 &1320317722
 Transform:
   m_ObjectHideFlags: 0
@@ -2935,6 +2937,7 @@ MonoBehaviour:
   wrong: {fileID: 531952087}
   score: {fileID: 974576830}
   next: {fileID: 1320317720}
+  isLast: 0
 --- !u!4 &1349800142
 Transform:
   m_ObjectHideFlags: 0

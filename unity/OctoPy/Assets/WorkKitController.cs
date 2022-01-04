@@ -21,7 +21,7 @@ public class WorkKitController : MonoBehaviour
     public Text score;
     public GameObject next;
     private SpeechRecognizerPlugin plugin = null;
-
+    public bool isLast = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -140,14 +140,18 @@ public class WorkKitController : MonoBehaviour
     IEnumerator ExecuteAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
-        staticDisplay.text = "Tap the mic to answer";
-        this.gameObject.SetActive(false);
-        check.gameObject.SetActive(false);
-        wrong.gameObject.SetActive(false);
-        checkf = false;
-        wrongf = false;
-        next.gameObject.SetActive(true);
-
+        if (!isLast)
+        {
+            staticDisplay.text = "Tap the mic to answer";
+            this.gameObject.SetActive(false);
+            check.gameObject.SetActive(false);
+            wrong.gameObject.SetActive(false);
+            checkf = false;
+            wrongf = false;
+            next.gameObject.SetActive(true);
+        }
+        else
+            SceneManager.LoadScene("WordKit");
     }
 
 }
